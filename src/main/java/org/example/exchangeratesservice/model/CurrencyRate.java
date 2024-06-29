@@ -13,9 +13,9 @@ import java.time.LocalDate;
 public class CurrencyRate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String currency;
-    private double rate;
+    private Integer curId;
+    private String curAbbreviation;
+    private Double curOfficialRate;
     private LocalDate date;
 
 }
