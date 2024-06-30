@@ -49,7 +49,6 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
         }
         else {
             String url = "https://api.nbrb.by/exrates/rates/" + code + "?ondate=" + date;
-            System.out.println(url);
             RestTemplate restTemplate = new RestTemplate();
             CurrencyDTO rate = restTemplate.getForObject(url, CurrencyDTO.class);
             if (rate == null || !rate.getDate().toLocalDate().equals(date)) {
